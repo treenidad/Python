@@ -27,8 +27,10 @@ scissors = '''
 ---.__(___)
 '''
 
+# Array variable used to hold the ASCII images of rock, paper, and scissors.
 game_images = [rock, paper, scissors]
 
+# The user makes their selection.
 user_choice = int(
     input(
         "What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"
@@ -36,10 +38,12 @@ user_choice = int(
 if user_choice >= 0 and user_choice <= 2:
     print(game_images[user_choice])
 
+    # Computer makes their selection.
     computer_choice = random.randint(0, 2)
     print("Computer chose:")
     print(game_images[computer_choice])
 
+    # Possible results.
     if user_choice == 0 and computer_choice == 2:
         print("You win!")
     elif computer_choice == 0 and user_choice == 2:
